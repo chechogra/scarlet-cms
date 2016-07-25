@@ -3,10 +3,10 @@
 
   angular
     .module('scarletCms')
-    .controller('MainController', MainController);
+    .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function MainController() {
+  function LoginController() {
     //var vm = this;
   }
 })();

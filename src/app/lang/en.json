@@ -1,5 +1,11 @@
 {
   "global": {
     "TEST": "TEST angular translate"
+  },
+  "login":{
+    "EMAIL_PLACEHOLDER": "Email Address",
+    "PASSWORD_PLACEHOLDER": "Password",
+    "SIGN_IN": "Sign in",
+    "RESET_PASSWORD": "Reset Password"
   }
 }
