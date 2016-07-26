@@ -82,6 +82,9 @@
         'es_145': 'es'
       },
       'preferredLocale': 'en'
+    })
+    .constant('scarletConfig', {
+      'API_PREFIX': '/apiv2'
     });
 
 })();

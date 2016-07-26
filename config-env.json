@@ -1,0 +1,17 @@
+{
+  "local": {
+    "EnvironmentConfig": {
+      "API_HOST": "https://qa.meetscarlet.com"
+    }
+  },
+  "qa": {
+    "EnvironmentConfig": {
+      "API_HOST": "https://qa.meetscarlet.com"
+    }
+  },
+  "production": {
+    "EnvironmentConfig": {
+      "API_HOST": "https://prd.meetscarlet.com"
+    }
+  }
+}
