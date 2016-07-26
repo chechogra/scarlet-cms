@@ -19,12 +19,65 @@
       })
       .state('dashboard', {
         url: '/dashboard',
-        //abstract: true,
+        abstract: true,
         templateUrl: 'app/dashboard/dashboard.html',
         controller: 'DashboardController',
         controllerAs: 'vm',
         data: {
           authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor]
+        }
+      })
+      .state('dashboard.content', {
+        url: '/content',
+        views: {
+          "tabContent@dashboard": {
+            templateUrl: 'app/dashboard/content/content.html',
+            controller: 'ContentController',
+            controllerAs: 'vm'
+          }
+        },
+        data: {
+          authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor]
+        }
+
+      })
+      .state('dashboard.users', {
+        url: '/users',
+        views: {
+          "tabContent@dashboard": {
+            templateUrl: 'app/dashboard/users/users.html',
+            controller: 'UsersController',
+            controllerAs: 'vm'
+          }
+        },
+        data: {
+          authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor]
+        }
+      })
+      .state('dashboard.tts', {
+        url: '/tts',
+        views: {
+          "tabContent@dashboard": {
+            templateUrl: 'app/dashboard/tts/tts.html',
+            controller: 'TTSController',
+            controllerAs: 'vm'
+          }
+        },
+        data: {
+          authorizedRoles: [USER_ROLES.admin, USER_ROLES.editor]
+        }
+      })
+      .state('dashboard.render', {
+        url: '/render',
+        views: {
+          "tabContent@dashboard": {
+            templateUrl: 'app/dashboard/render/render.html',
+            controller: 'RenderController',
+            controllerAs: 'vm'
+          }
+        },
+        data: {
+          authorizedRoles: [USER_ROLES.editor]
         }
       });
 

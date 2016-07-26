@@ -1,1 +1,7 @@
-<div>dashboard</div>
+<section class="dashboard">
+  <uib-tabset>
+    <uib-tab  ng-repeat="tab in vm.tabs track by $index" active="tab.active"  heading="{{tab.heading}}" index="$index" select="vm.goToState(tab.route)"></uib-tab>
+  </uib-tabset>
+
+  <div ui-view="tabContent"></div>
+</section>

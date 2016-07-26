@@ -1,6 +1,7 @@
 {
   "global": {
-    "APP_NAME": "Scarlet Admin"
+    "APP_NAME": "Scarlet Admin",
+    "NOT_AUTHORIZED": "No tienes acceso al servicio solicitado"
   },
   "login": {
     "EMAIL_PLACEHOLDER": "Email",
@@ -10,5 +11,11 @@
   },
   "auth": {
     "NOT_AUTHORIZED_ROLE": "No tienes privilegios de acceso para este servicio"
+  },
+  "dashboard":{
+    "CONTENT_TAB_HEADING": "content",
+    "USERS_TAB_HEADING": "users",
+    "TTS_TAB_HEADING": "TTS stats",
+    "RENDER_TAB_HEADING": "render"
   }
 }

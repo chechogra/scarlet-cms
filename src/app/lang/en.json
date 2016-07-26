@@ -11,5 +11,11 @@
   },
   "auth": {
     "NOT_AUTHORIZED_ROLE": "You do not have access privileges for this service"
+  },
+  "dashboard":{
+    "CONTENT_TAB_HEADING": "content",
+    "USERS_TAB_HEADING": "users",
+    "TTS_TAB_HEADING": "TTS stats",
+    "RENDER_TAB_HEADING": "render"
   }
 }

@@ -21,7 +21,7 @@
         vm.errorFeedback = '';
         $log.debug(response);
         $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-        $state.go('dashboard');
+        $state.go('dashboard.content');
       }, function errorCallback(response) {
         if(response && angular.isObject(response)){
           vm.errorFeedback = response.data.message;
