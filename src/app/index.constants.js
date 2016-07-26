@@ -4,6 +4,18 @@
 
   angular
     .module('scarletCms')
+    .constant('AUTH_EVENTS', {
+      loginSuccess: 'security-login-success',
+      loginFailed: 'security-login-failed',
+      logoutSuccess: 'security-logout-success',
+      sessionTimeout: 'security-session-timeout',
+      notAuthenticated: 'security-not-authenticated',
+      notAuthorized: 'security-not-authorized'
+    })
+    .constant('USER_ROLES', {
+      admin: 'Admin',
+      editor: 'Editor'
+    })
     .constant('LOCALES', {
       'locales': {
         'en': 'English',

@@ -1,11 +1,14 @@
 {
   "global": {
-    "TEST": "TEST angular translate"
+    "APP_NAME": "Scarlet Admin"
   },
-  "login":{
+  "login": {
     "EMAIL_PLACEHOLDER": "Email Address",
     "PASSWORD_PLACEHOLDER": "Password",
     "SIGN_IN": "Sign in",
     "RESET_PASSWORD": "Reset Password"
+  },
+  "auth": {
+    "NOT_AUTHORIZED_ROLE": "You do not have access privileges for this service"
   }
 }

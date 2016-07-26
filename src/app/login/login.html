@@ -1,14 +1,24 @@
 <section class="login-section">
   <div class="container">
     <div class="card card-container">
-      <img id="profile-img" class="profile-img-card" src="assets/images/scarlet-small.png" />
+      <h1 class="app-name">{{'global.APP_NAME' | translate}}</h1>
+      <img id="profile-img" class="profile-img-card" src="assets/images/scarlet-small.png"/>
       <p id="profile-name" class="profile-name-card"></p>
+      <div class="error-feedback">{{vm.errorFeedback}}</div>
       <form class="form-signin" name="loginform" ng-submit="loginform.$valid && vm.loginSubmit()" novalidate>
-        <input ng-model="vm.credentials.email" type="text" id="email" class="form-control" placeholder="{{'login.EMAIL_PLACEHOLDER' | translate}}" required autofocus>
-        <input ng-model="vm.credentials.password" type="password" id="password" class="form-control" placeholder="{{'login.PASSWORD_PLACEHOLDER' | translate}}" required>
-          <button id="login_btn" class="btn btn-lg btn-block btn-signin" type="submit">{{'login.SIGN_IN' | translate}}</button>
+        <div class="form-group" ng-class="{ 'has-error': loginform.email.$invalid && loginform.email.$dirty }">
+          <input ng-model="vm.credentials.email" type="text" id="email" name="email" class="form-control"
+                 placeholder="{{'login.EMAIL_PLACEHOLDER' | translate}}" required autofocus>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': loginform.password.$invalid && loginform.password.$dirty }">
+          <input ng-model="vm.credentials.password" type="password" id="password" name="password" class="form-control"
+                 placeholder="{{'login.PASSWORD_PLACEHOLDER' | translate}}" required>
+        </div>
+        <button id="login_btn" class="btn btn-lg btn-block btn-signin" type="submit">{{'login.SIGN_IN' | translate}}
+        </button>
       </form>
       <a class="reset-password">{{'login.RESET_PASSWORD' | translate}}</a>
+
     </div>
   </div>
 </section>
