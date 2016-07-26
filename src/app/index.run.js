@@ -6,8 +6,10 @@
     .run(runBlock);
 
   /** @ngInject */
-  function runBlock($rootScope, AUTH_EVENTS, AuthService) {
+  function runBlock($rootScope, AUTH_EVENTS, AuthService, Session) {
     var deregisterationStateChangeStart = $rootScope.$on('$stateChangeStart', function (event, next) {
+
+      Session.restoreSessionIfEmpty();
 
       if (next.data && next.data.authorizedRoles && !AuthService.isAuthorized(next.data.authorizedRoles)) {
         event.preventDefault();
@@ -19,7 +21,7 @@
           $rootScope.$broadcast(AUTH_EVENTS.notAuthenticated);
         }
       }
-      
+
     });
 
     $rootScope.$on('$destroy', function () {

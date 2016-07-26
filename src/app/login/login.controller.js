@@ -6,7 +6,7 @@
     .controller('LoginController', LoginController);
 
   /** @ngInject */
-  function LoginController($rootScope, $log, AUTH_EVENTS, AuthService) {
+  function LoginController($rootScope, $log, $state, AUTH_EVENTS, AuthService) {
     var vm = this;
     vm.credentials = {};
     vm.credentials.email = null;
@@ -17,6 +17,7 @@
         vm.errorFeedback = '';
         $log.debug(response);
         $rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+        $state.go('dashboard');
       }, function errorCallback(response) {
         if(response && angular.isObject(response)){
           vm.errorFeedback = response.data.message;
