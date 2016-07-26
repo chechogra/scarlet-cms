@@ -1,6 +1,7 @@
 {
   "global": {
-    "APP_NAME": "Scarlet Admin"
+    "APP_NAME": "Scarlet Admin",
+    "NOT_AUTHORIZED": "You do not have access privileges for the requested service"
   },
   "login": {
     "EMAIL_PLACEHOLDER": "Email Address",

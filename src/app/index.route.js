@@ -10,6 +10,9 @@
     $stateProvider
       .state('login', {
         url: '/login',
+        params: {
+          messageCode: null
+        },
         templateUrl: 'app/login/login.html',
         controller: 'LoginController',
         controllerAs: 'vm'
